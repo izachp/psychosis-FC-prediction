@@ -24,10 +24,13 @@ Details on how to use this repository are provided in `scripts`.
 If you use any of the prediction algorithms implemented here, please cite their work:
 
 **Connectome-based predictive modelling**
+
 Shen X, Finn ES, Scheinost D, Rosenberg MD, Chun MM, Papademetris X, et al. Using connectome-based predictive modeling to predict individual behavior from brain connectivity. Nat Protoc. 2017 Mar;12(3):506–18.
 
 **Kernel Ridge Regression**
+
 Li J, Kong R, Liégeois R, Orban C, Tan Y, Sun N, et al. Global signal regression strengthens association between resting-state functional connectivity and behavior. NeuroImage. 2019 Aug 1;196:126–41.
 
 **Multilayer Meta-matching**
+
 Chen P, An L, Wulan N, Zhang C, Zhang S, Ooi LQR, et al. Multilayer meta-matching: Translating phenotypic prediction models from multiple datasets to small data. Imaging Neuroscience. 2024 Jul 17;2:1–22.
