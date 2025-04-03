@@ -8,6 +8,6 @@ These folders contain individual fMRI time series, preprocessed using the 'dt_AR
 Time series were then calculated by taking the mean signal for each parcel, weighting each voxel's contribution by its probability of being grey matter, as estimated by fMRIPrep.
 
 ## Folder descriptions
-1. `ses-1 ` contains baseline fMRI data, parcellated into 328 regions (Schaefer300 + Scale II Melbourne Subcortex - low signal regions), and is used for CPM & KRR
-2. `ses-2` contains 3-month fMRI data, parcellated into 328 regions (Schaefer300 + Scale II Melbourne Subcortex - low signal regions), and is used for CPM & KRR
-3. `ses-1_419-reg` contains baseline fMRI, parcellated into 419 regions (Schaefer400 + FreeSurfer's subcortical segmentation), and is used for multilayer meta-matching
+1. `ses-1` contains baseline fMRI data for the 328-region parcellation (CPM & KRR)
+2. `ses-2` contains 3-month fMRI data for the 328-region parcellation (CPM & KRR)
+3. `ses-1_419-reg` contains baseline fMRI data for the 419-region parcellation (multilayer meta-matching)
