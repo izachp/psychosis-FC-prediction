@@ -1,4 +1,4 @@
-Data and code for submitted manuscript 'Functional coupling and longitudinal outcome prediction in first-episode psychosis'
+Data and code for preprint '[Functional Coupling and Longitudinal Outcome Prediction in First-Episode Psychosis](https://www.medrxiv.org/content/10.1101/2025.04.01.25325005v1)'
 
 This work uses multiple cross-validated prediction algorithms to evaluate whether resting-state functional coupling (FC), acquired via fMRI, could predict the longitudinal changes in symptoms and functioning of first-episode psychosis patients in the [STAGES clinical trial](https://academic.oup.com/schizbullopen/article/1/1/sgaa015/5810294). *Short answer: it could not.*
 
@@ -21,6 +21,8 @@ Details on how to use this repository are provided in `scripts`.
 5. `subjects_ses-2.txt`: List of subjects with usable FC data at 3 months.
 
 ## Citation
+[PREPRINT] Pope IZ, Chopra S, Holmes A, Francey SM, O’Donoghue B, Cropley VL, et al. Functional Coupling and Longitudinal Outcome Prediction in First-Episode Psychosis. medRxiv. 2025 Apr 4. doi:10.1101/2025.04.01.25325005v1
+
 If you use any of the prediction algorithms implemented here, please cite their work:
 
 **Connectome-based predictive modelling**
