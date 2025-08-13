@@ -1,11 +1,11 @@
-Data and code supporting '[Functional Coupling and Longitudinal Outcome Prediction in First-Episode Psychosis](doi.org/10.1016/j.bpsgos.2025.100589)'
+Data and code supporting '[Functional Coupling and Longitudinal Outcome Prediction in First-Episode Psychosis](https://doi.org/10.1016/j.bpsgos.2025.100589)'
 
-We used resting-state functional magnetic resonance imaging (fMRI) to evaluate whether baseline functional coupling (FC), or 3-month changes (ΔFC), could predict 6- and 12-month changes in symptoms and functioning of first-episode psychosis patients in the [STAGES randomised control trial](doi.org/10.1093/schizbullopen/sgaa015). *Short answer: it could not.*
+We used resting-state functional magnetic resonance imaging (fMRI) to evaluate whether baseline functional coupling (FC), or 3-month changes (ΔFC), could predict 6- and 12-month changes in symptoms and functioning of first-episode psychosis patients in the [STAGES randomised control trial](https://doi.org/10.1093/schizbullopen/sgaa015). *Short answer: it could not.*
 
 Three cross-validated algorithms were chosen:
-- [Connectome-based predictive modelling (CPM)](doi.org/10.1038/nprot.2016.178)
-- [Kernel ridge regression (KRR)](doi.org/10.1016/j.neuroimage.2019.04.016)
-- [Multilayer meta-matching](doi.org/10.1162/imag_a_00233)
+- [Connectome-based predictive modelling (CPM)](https://doi.org/10.1038/nprot.2016.178)
+- [Kernel ridge regression (KRR)](https://doi.org/10.1016/j.neuroimage.2019.04.016)
+- [Multilayer meta-matching](https://doi.org/10.1162/imag_a_00233)
 
 **This repository includes:**
 - Clinical outcome data
