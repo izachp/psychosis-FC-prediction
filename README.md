@@ -1,27 +1,31 @@
-Data and code for preprint '[Functional Coupling and Longitudinal Outcome Prediction in First-Episode Psychosis](https://www.medrxiv.org/content/10.1101/2025.04.01.25325005v1)'
+Data and code supporting '[Functional Coupling and Longitudinal Outcome Prediction in First-Episode Psychosis](doi.org/10.1016/j.bpsgos.2025.100589)'
 
-This work uses multiple cross-validated prediction algorithms to evaluate whether resting-state functional coupling (FC), acquired via fMRI, could predict the longitudinal changes in symptoms and functioning of first-episode psychosis patients in the [STAGES clinical trial](https://academic.oup.com/schizbullopen/article/1/1/sgaa015/5810294). *Short answer: it could not.*
+We used resting-state functional magnetic resonance imaging (fMRI) to evaluate whether baseline functional coupling (FC), or 3-month changes (ΔFC), could predict 6- and 12-month changes in symptoms and functioning of first-episode psychosis patients in the [STAGES randomised control trial](doi.org/10.1093/schizbullopen/sgaa015). *Short answer: it could not.*
+
+Three cross-validated algorithms were chosen:
+- [Connectome-based predictive modelling (CPM)](doi.org/10.1038/nprot.2016.178)
+- [Kernel ridge regression (KRR)](doi.org/10.1016/j.neuroimage.2019.04.016)
+- [Multilayer meta-matching](doi.org/10.1162/imag_a_00233)
 
 **This repository includes:**
 - Clinical outcome data
 - Preprocessed and parcellated fMRI timeseries
-- Code for creating FC matrices
-- Code for running the three prediction algorithms
-- Code for assessing prediction performance & significance and generating results figures
+- Code for creating FC (and ΔFC) matrices
+- Code for running prediction models
+- Code for assessing prediction performance/significance and generating results figures
 
-**NOTE:** Since the STAGES dataset used here is not open-access, we are unable to provide raw MRI data for patients. The clinical outcome data has also been z-scored, which may minimally affect any results generated.
+**NOTE:** Due to ethics constraints on the STAGES dataset, we are unable to provide fMRI images. The clinical outcome data has also been z-scored (within timepoints where applicable), which may create minor discrepancies when using this repository to reproduce our results.
 
-Details on how to use this repository are provided in `scripts`.
+## Setup
+- Python dependencies are listed in `pyproject.toml`, and can be easily set up with [UV](https://docs.astral.sh/uv/) by navigating to the project root in the terminal, then running `uv venv` and `uv sync`.
+- The R scripts for making FC matrices and generating results require the `tidyverse`, `ggplot2`, and `ggpubr` libraries. 
+- The KRR analyses require [these MATLAB scripts from the CBIG repository](https://github.com/ThomasYeoLab/CBIG/tree/master/utilities/matlab/predictive_models/KernelRidgeRegression) to be downloaded.
+- The meta-matching analyses also require [these files](https://github.com/ThomasYeoLab/Meta_matching_models/tree/main/rs-fMRI) to be downloaded, along with [these pre-trained model files](https://github.com/ThomasYeoLab/Meta_matching_models/releases/tag/v2.0-rsfMRI). Unzip the 656MB file from the latter link and place the `models` directory inside the `v2.0` directory from the former link.
 
-## File Descriptions
-1. `bprs_data.csv`: Contains z-scores corresponding to each patient's total on the Brief Psychiatric Rating Scale, assessed at baseline, 6 months, or 12 months (fkTimepoint = 1, 4, and 5, respectively).
-2. `sofas_data.csv`: Contains z-scores corresponding to each patient's total on the Social and Occupational Functioning Assessment Scale, assessed at baseline, 6 months, or 12 months (fkTimepoint = 1, 4, and 5, respectively).
-3. `low_signal_regions.txt`: Contains names and parcel IDs of regions excluded from the CPM and KRR models due to low signal.
-4. `subjects_ses-1.txt`: List of subjects with usable FC data at baseline.
-5. `subjects_ses-2.txt`: List of subjects with usable FC data at 3 months.
+Details on how to reproduce the paper's results are provided in `scripts`, and information is also provided in `data`.
 
 ## Citation
-[PREPRINT] Pope IZ, Chopra S, Holmes A, Francey SM, O’Donoghue B, Cropley VL, et al. Functional Coupling and Longitudinal Outcome Prediction in First-Episode Psychosis. medRxiv. 2025 Apr 4. doi:10.1101/2025.04.01.25325005v1
+Pope IZ, Chopra S, Holmes A, Francey SM, O’Donoghue B, Cropley VL, et al. Functional Coupling and Longitudinal Outcome Prediction in First-Episode Psychosis. Biological Psychiatry Global Open Science. 2025 Aug 11. doi:10.1016/j.bpsgos.2025.100589
 
 If you use any of the prediction algorithms implemented here, please cite their work:
 
