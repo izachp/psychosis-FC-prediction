@@ -1,4 +1,4 @@
-These scripts were run using MATLAB R2019b, R-4.4.0, and Python 3.9.18. The prediction algorithm scripts also make use of parallel processing and `sbatch` jobs on a high-performance computing cluster ([MASSIVE](doi.org/10.3389/fninf.2014.00030)), which should be adjusted according to your setup.
+These scripts were run using MATLAB R2019b, R-4.4.0, and Python 3.9.18. The prediction algorithm scripts also make use of parallel processing and `sbatch` jobs on a high-performance computing cluster ([MASSIVE](https://doi.org/10.3389/fninf.2014.00030)), which should be adjusted according to your setup.
 
 Some scripts need to be adjusted near the top:
 - `make_FC.R`, `submit_<algorithm>.sh`, and `make_figures.R` require paths to this repository, the CBIG repository, and/or the meta-matching files
