@@ -17,7 +17,7 @@ Three cross-validated algorithms were chosen:
 **NOTE:** Due to ethics constraints on the STAGES dataset, we are unable to provide fMRI images. The clinical outcome data has also been z-scored (within timepoints where applicable), which may create minor discrepancies when using this repository to reproduce our results.
 
 ## Setup
-- Python dependencies are listed in `pyproject.toml`, and can be easily set up with [UV](https://docs.astral.sh/uv/) by navigating to the project root in the terminal, then running `uv venv` and `uv sync`.
+- Python dependencies are listed in `pyproject.toml`, and can be set up with [UV](https://docs.astral.sh/uv/) by running `uv sync` from the project root in the terminal.
 - The R scripts for making FC matrices and generating results require the `tidyverse`, `ggplot2`, and `ggpubr` libraries. 
 - The KRR analyses require [these MATLAB scripts from the CBIG repository](https://github.com/ThomasYeoLab/CBIG/tree/master/utilities/matlab/predictive_models/KernelRidgeRegression) to be downloaded.
 - The meta-matching analyses also require [these files](https://github.com/ThomasYeoLab/Meta_matching_models/tree/main/rs-fMRI) to be downloaded, along with [these pre-trained model files](https://github.com/ThomasYeoLab/Meta_matching_models/releases/tag/v2.0-rsfMRI). Unzip the 656MB file from the latter link and place the `models` directory inside the `v2.0` directory from the former link.
